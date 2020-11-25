@@ -1,10 +1,9 @@
 <ul>
   <% @restaurant.reviews.each do |review| %>
-    <li><%= review.content %></li>
-    <li><%= review.rating %></li>
+    <li>It is <%= review.rating %> stars!</li>
+    <li>This is because it is <%= review.content %>.</li>
   <%  end  %>
-    <li><%= @restaurant.name %></li>
-    <li><%= @restaurant.address %></li>
-    <li><%= @restaurant.category %></li>
+    <li>restaurant: <%= @restaurant.name %></li>
+    <li>address: <%= @restaurant.address %></li>
+    <li>category: <%= @restaurant.category %></li>
 </ul>
-<%= link_to "See details", review_path(review), class: "btn btn-primary"%>
